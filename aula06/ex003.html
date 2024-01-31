@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro JS</title>
+    <style>
+        body {
+            background-color: orangered;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+            color: white;
+        }
+
+        div {
+            position: absolute;
+            display: block;
+
+            width: 350px;
+            background-color: rgb(230, 61, 0);
+
+            text-align: center;
+
+            border: 5px solid white;
+            border-radius: 30px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @media screen and (min-width: 280px) and (max-width:580px) {
+            div {
+                font-size: 0.6em;
+                width: 220px;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Olá, Mundo!</h1>
+        <p>Já me livrei da maldição</p>
+    </div>
+
+    <script>
+        var n1 = Number(window.prompt('Digite um número:'))
+        var n2 = Number.parseInt(window.prompt('Digite outro número:'))
+        var soma = (n1 + n2)
+
+        window.alert('A soma entre ' + n1 + ' e ' + n2 + ' é: ' + String(soma))
+    </script>
+</body>
+</html>
