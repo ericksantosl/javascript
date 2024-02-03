@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sua Nacionalidade</h1>
+    <label for="itext">Digite seu país:</label>
+    <input type="text" name="text" id="itext">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <p id="res">
+
+    </p>
+
+    <script>
+        function verificar() {
+            var text = window.document.querySelector('input#itext')
+            var res = window.document.querySelector('p#res')
+
+            var nac = text.value
+
+            if (nac == 'Brasil') {
+                res.innerText = `Seu país é ${nac} e você é brasileiro(a)` 
+            } else {
+                res.innerText = `Seu país é ${nac} e você é estrangeiro(a)`
+            }
+        }
+    </script>
+</body>
+</html>
