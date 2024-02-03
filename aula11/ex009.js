@@ -1,6 +1,6 @@
 var país = 'EUA'
 if (país == 'Brasil') {
     console.log('Brasileiro(a)')
-} else [
+} else {
     console.log('Estrangeiro!')
-]
+}
