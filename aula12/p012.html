@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprimentando</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: orangered;
+        }
+
+        div {
+            position: absolute;
+            min-width: 220px;
+
+            font-size: 1.8em;
+            text-align: center;
+            border: 4px solid orange;
+            border-radius: 30px;
+            padding: 20px;
+            color: white;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="comp"></h1>
+        <p id="par"></p>
+    </div>
+
+    <script>
+        var agora = new Date()
+        var dia = agora.getHours()
+        var comp = window.document.querySelector('h1#comp')
+        var p = window.document.querySelector('p#par')
+
+
+        if (dia <= 5) {
+            comp.innerHTML = 'Boa madrugada!'
+            p.innerHTML = `Você está no periodo das <strong>${dia}</strong> horas`
+        } else if (dia >= 6 && dia <=11) {
+            comp.innerHTML = 'Bom dia!'
+            p.innerHTML = `Você está no periodo das <strong>${dia}</strong> horas`
+        } else if (dia >= 12 && dia < 18) {
+            comp.innerHTML = 'Boa tarde!'
+            p.innerHTML = `Você está no periodo das <strong>${dia}</strong> horas`
+        } else if (dia >= 18 && dia < 24) {
+            comp.innerHTML = 'Boa noite!'
+            p.innerHTML = `Você está no periodo das <strong>${dia}</strong> horas`
+        } else {
+            comp.innerHTML = 'Sua hora é inválida!'
+        }
+    </script>
+</body>
+</html>
