@@ -3,19 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de Exercício</title>
+    <title>Verificador de Idade</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Verificador de Idade</h1>
     </header>
     <section>
         <div>
-            testando
+            <p>
+                <label for="iano">Ano de Nascimento:</label>
+                <input type="number" name="ano" id="iano">
+            </p>
+            <p>
+                <fieldset>
+                    <legend>Sexo</legend>
+                    <label for="imasc">Maculino</label>
+                    <input type="radio" name="sex" id="imasc" checked>
+                    <label for="ifem">Feminino</label>
+                    <input type="radio" name="sex" id="ifem">
+                </fieldset>
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
         </div>
-        <div>
-            oi
+        <div id="res">
+            Preencha os dados acima para ver o resultado!
         </div>
     </section>
     <footer>
