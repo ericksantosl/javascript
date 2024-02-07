@@ -1,8 +1,8 @@
 function carregar() {
     var msg = window.document.querySelector('p#msg')
     var img = window.document.querySelector('img#imagem')
-    //var agora = new Date()
-    var hora = 22//agora.getHours()
+    var agora = new Date()
+    var hora = agora.getHours()
 
     msg.innerHTML = `Você está no periodo das <strong>${hora}</strong> horas`
 
