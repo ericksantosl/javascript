@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body {
-    background-color: rgb(0, 170, 170);
+    background-color: orangered;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
@@ -12,9 +12,11 @@ header {
 
 section {
     background-color: white;
-    width: 500px;
+    max-width: 400px;
     padding: 15px;
-    border-radius: 10px;
+
+    border: 5px solid orange;
+    border-radius: 30px;
     margin: auto;
 
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -24,12 +26,34 @@ input#iano {
     width: 100px;
 }
 
+input#verificar {
+    height: 30px;
+    width: 70px;
+    cursor: pointer;
+}
+
 fieldset {
+    border: 2px solid orange;
+    border-radius: 10px;
     margin: auto;
     width: 200px;
+}
+
+div#res {
+    text-align: center;
+    margin: auto;
 }
 
 footer {
     color: white;
     font-style: italic;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    font-weight: bold;
 }
