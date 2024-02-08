@@ -1,13 +1,13 @@
 @charset "UTF-8";
 
 body {
-    background-color: rgb(0, 170, 170);
+    background-color: orangered;
     font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
 }
 
 header {
     color: white;
+    text-align: center;
 }
 
 section {
@@ -23,4 +23,5 @@ section {
 footer {
     color: white;
     font-style: italic;
+    text-align: center;
 }
