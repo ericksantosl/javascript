@@ -12,16 +12,52 @@ header {
 
 section {
     background-color: white;
-    width: 500px;
+    max-width: 400px;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 30px;
     margin: auto;
 
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border: 5px solid rgb(33, 90, 247);
+}
+
+div#formulario {
+    text-align: center;
+}
+
+div#res {
+    text-align: justify;
+}
+
+input[type=number] {
+    width: 60px;
+}
+
+input[type=button] {
+    height: 30px;
+    width: 60px;
+    color: white;
+    background-color: rgb(33, 90, 247);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background-color: rgb(81, 127, 255);
 }
 
 footer {
     color: white;
     font-style: italic;
     text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    font-weight: bold;
 }
