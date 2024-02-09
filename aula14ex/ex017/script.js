@@ -5,7 +5,7 @@ function gerar() {
     var r
     var res = window.document.querySelector('option#res')
 
-    if (n == '') {
+    if (number.value.value == 0) {
         alert('[ERROR] Por favor, digite um número!')
     } else {
         tab.innerHTML = ''
@@ -13,6 +13,7 @@ function gerar() {
             r = n * c
             var item = document.createElement('option')
             item.text = `${n} x ${c} = ${r}`
+            item.value = `tab${c}`
             tab.appendChild(item)
         }
     }
