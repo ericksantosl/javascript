@@ -4,13 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boas-Vindas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input {
+            width: 190px;
+            height: 40px;
+            font-size: 1.5em;
+        }
+    </style>
 </head>
 <body>
     <header>
-
+        <h1>Boas-Vindas</h1>
     </header>
     <main>
-        
+        <p>
+            <input type="button" value="Inicie o Desafio" onclick="desafio()">
+        </p>
     </main>
+
+    <script>
+        function desafio() {
+            var nome = window.prompt('Digite seu nome:')
+            var idade = window.prompt(`Olá ${nome}! Qual a sua idade?`)
+            alert(`Acabei de conhecer ${nome}, que tem ${idade} anos de idade.`)
+        }
+    </script>
 </body>
 </html>
