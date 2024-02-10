@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes e Depois</title>
+</head>
+<body>
+    <header>
+        <h1>Antes e Depois</h1>
+    </header>
+    <main>
+        <p>
+            <input type="button" value="Antecessor e Sucessor" onclick="clique()">
+        </p>
+    </main>
+
+    <script>
+        function clique() {
+            var number = Number(window.prompt('Digite um numero inteiro qualquer:'))
+            alert(`O antecessor de ${number} é ${number - 1}. E o seu sucessor é ${number + 1}`)
+        }
+    </script>
+</body>
+</html>
