@@ -1,11 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Calculando Troco</h1>
+    </header>
+    <main>
+        <form action="ação.php" method="get">
+            <input type="button" value="Comprar Produto" onclick="comprar()">
+        </form>
+    </main>
+
+    <script>
+        function comprar() {
+            var prod = window.prompt('Qual produto você quer comprar?')
+            var preco = window.prompt(`Qual o valor de ${prod}?`)
+            var pago = window.prompt(`Qual valor você deu para pagar o produto?`)
+            var troco = pago - preco
+            var pr = Number(preco)
+            var pa = Number(pago)
+
+            
+            if (prod.length == 0 || preco.length == 0 || pago.length == 0) {
+                alert('[ERROR] Faltaram dados!')
+            } else if (preco > pago || troco <= 0) {
+                alert('[ERROR] Parece que você deu algum valor abaixo do valor do produto!')
+            } else {
+                alert(`O produto ${prod} lhe custou ${pr.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}. O valor pago foi ${pa.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} e você receberá ${troco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} de troco!`)
+            }
+
+        }
+    </script>
 </body>
 </html>
