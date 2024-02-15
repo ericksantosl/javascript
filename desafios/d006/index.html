@@ -3,9 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor de Temperatura</title>
+    <title>Conversor</title>
+    <style>
+        body {
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <h1>Conversor de Temperaturas</h1>
+    </header>
+    <main>
+        <div>
+            <input type="button" value="Converter" onclick="converter()">
+        </div>
+        <div id="res">
+            Clique no botão acima para iniciar.
+        </div>
+    </main>
+
+    <script>
+        function converter() {
+            var cel = Number(prompt('Digite a temperatura em °C (Celsius):'))
+            var res = window.document.querySelector('div#res')
+
+            // Fahrenheit
+            fah = cel * 1.8 + 32
+
+            // Kelvin
+            kel = cel + 273.15
+
+            res.innerHTML = `<h2>A temperatura de ${cel}°C, corresponde a...</h2>`
+            res.innerHTML += `<p>${kel}°K (Kelvin)</p>`
+            res.innerHTML += `<p>${fah}°F (Fahrenheit)</p>`
+        }
+    </script>
 </body>
 </html>
