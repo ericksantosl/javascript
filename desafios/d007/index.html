@@ -4,8 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.8em;
+        }
+
+        input {
+            font-size: 1.5em;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Conversor R$ > US$</h1>
+    <input type="button" value="Converter" onclick="converter()">
+    <p id="res">Clique no botão acima para iniciar!</p>
+
+    <script>
+        var cot = Number(window.prompt('Antes de tudo, quanto está a cotação do dólar neste momento?'))
+        var res = window.document.querySelector('p#res')
+
+        function converter() {1
+            if (cot < 0 || cot == 0) {
+                alert('Você precisa me indicar a cotação do dólar, recarregue a página e tente novamente!')
+            } else {
+                var real = Number(prompt('Quantos R$ tem na sua carteira?'))
+            }
+
+            var conv = real / cot
+
+            res.innerHTML = `Você tem em dólares: US$${Number(conv.toFixed(2))}`
+        }
+
+        
+    </script>
 </body>
 </html>
