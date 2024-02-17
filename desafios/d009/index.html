@@ -1,11 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reajuste</title>
+    <style>
+        body {
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input {
+            font-size: 1.5em;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Reajuste Salarial</h1>
+    <input type="button" value="Reajustar" onclick="reajustar()">
+    <div id="res">
+        <p>Clique no botão acima para iniciar.</p>
+    </div>
+
+    <script>
+        let nome = prompt('Qual é o nome do funcionário?')
+        let salario = Number(prompt(`Qual é o salário de ${nome}?`))
+        let porc = Number(prompt(`O salário de ${nome} vai ser reajustado em qual porcentagem?`))
+        let res = window.document.querySelector('div#res')
+        let porcentagem = porc / 100
+        let aumento = salario * porcentagem
+        let total = salario + aumento
+
+        function reajustar() {
+            if (nome.length == 0 || salario.length == 0 || porc.length == 0) {
+                alert(`[ERROR] Faltou dados! Recarregue a página e tente novamente`)
+            } else {
+                res.innerHTML = `<h1>${nome} recebeu um aumento salarial!</h1>`
+                res.innerHTML += `<p>O salário atual era R$ ${salario.toFixed(2)}</p>`
+                res.innerHTML += `<p>Com um aumento de ${porc}%, o salário vai aumentar R$ ${aumento.toFixed(2)} no próximo mês.</p>`
+                res.innerHTML += `<p>E a partir daí, ${nome} vai passar a ganhar R$ ${total.toFixed(2)}</p>`
+                
+            }
+            
+        }
+    </script>
 </body>
 </html>
