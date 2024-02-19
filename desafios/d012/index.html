@@ -21,5 +21,35 @@
     <div id="res">
         <p>Clique no botão acima para analizar a mudança de preço.</p>
     </div>
+
+    <script>
+        function verificar() {
+            let pa = Number(prompt('Qual era o preço anterior do produto?'))
+            let pd = Number(prompt('Qual é o preço atual do produto?'))
+            let res = window.document.querySelector('div#res')
+
+            if (pa.length == 0 || pd.length == 0) {
+                alert('[ERROR] Faltam dados! Tente novamente.')
+            } else if (pa > pd) {
+                let caiu = pa - pd
+                let vari = [(pa - pd) / pd] *100
+
+                res.innerHTML = `<h1>Analisando os valores informados</h1>`
+                res.innerHTML += `<p>O produto custava R$ ${pa.toFixed(2)} e agora custa R$ ${pd.toFixed(2)}.</p>`
+                res.innerHTML += `<p>Hoje o produto está mais barato.</p>`
+                res.innerHTML += `<p>O preço caiu R$ ${caiu.toFixed(2)} em relação ao preço anterior.</p>`
+                res.innerHTML += `<p>Uma variação de ${vari.toFixed(2)}% para baixo.</p>`
+            } else {
+                let subiu = pd - pa
+                let vari = [(pd - pa) / pa] *100
+
+                res.innerHTML = `<h1>Analisando os valores informados</h1>`
+                res.innerHTML += `<p>O produto custava R$ ${pa.toFixed(2)} e agora custa R$ ${pd.toFixed(2)}.</p>`
+                res.innerHTML += `<p>Hoje o produto está mais caro.</p>`
+                res.innerHTML += `<p>O preço subiu R$ ${subiu.toFixed(2)} em relação ao preço anterior.</p>`
+                res.innerHTML += `<p>Uma variação de ${vari.toFixed(2)}% para cima.</p>`
+            }
+        }
+    </script>
 </body>
 </html>
