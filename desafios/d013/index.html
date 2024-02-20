@@ -17,9 +17,34 @@
 </head>
 <body>
     <h1>Situação do aluno</h1>
-    <input type="button" value="Entrar com as notas">
+    <input type="button" value="Entrar com as notas" onclick="verificar()">
     <div id="res">
         <p>Clique no botão acima para ver a situação atual do aluno baseado em suas notas.</p>
     </div>
+
+    <script>
+        function verificar() {
+            let nome = prompt('Qual o nome do aluno?')
+            let n1 = prompt(`Qual foi a primeira nota de ${nome}?`)
+            let n2 = prompt(`Qual foi a sua segunda nota?`)
+            let media = (Number(n1) + Number(n2)) / 2
+            let res = window.document.querySelector('div#res')
+
+            if (nome.length == 0 || n1.length == 0 || n2.length == 0) {
+                alert('[ERROR] Faltam dados. Tente novamente!')
+            } else {
+                res.innerHTML = `<h1>Analisando a situação de ${nome}</h1>` 
+                res.innerHTML += `<p>Com as notas ${Number(n1).toFixed(1)} e ${Number(n2).toFixed(1)}, a <strong>média é ${media.toFixed(1)}</strong></p>`
+                if (media < 3) {
+                    res.innerHTML += `<p>Com média abaixo de 3.0, ${nome} está <strong>REPROVADO(A)</strong></p>`
+                } else if (media >= 3 && media <= 6) {
+                    res.innerHTML += `<p>Com média entre 3.0 e 6.0, ${nome} está em <strong>RECUPERAÇÃO</strong></p>`
+                } else  if (media > 6) {
+                    res.innerHTML += `<p>Com média acima de 6, ${nome} está <strong>APROVADO(A)</strong></p>`
+                }
+            }
+            
+        }
+    </script>
 </body>
 </html>
