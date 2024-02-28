@@ -49,11 +49,6 @@ let c1 = new Carro('Gol', 1)
 let c2 = new Carro('Porshe', 3)
 let c3 = new Carro('S10', 2)
 
-c1.setNome('Palio')
-
-c1.info()
-//c2.info()
-//c3.info()
 
 
 
