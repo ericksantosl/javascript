@@ -26,3 +26,34 @@ class Pessoa {
         console.log(`-----------------`)
     }
 }
+
+let pessoas = []
+
+const res = document.querySelector('.res')
+
+function addPessoa() {
+    res.innerHTML = ''
+    pessoas.map((p) => {
+        const div = document.createElement("div")
+        div.setAttribute("class", "pessoa")
+        div.innerHTML = `Nome: ${p.getNome()}<br>Idade: ${p.getIdade()}`
+        res.appendChild(div)
+    })
+}
+
+function adicionar() {
+    let nome = document.querySelector('#iname')
+
+    let idade = document.querySelector('#iidade')
+
+    let p = new Pessoa(nome.value, idade.value)
+
+    pessoas.push(p)
+
+    nome.value = ""
+    idade.value = ""
+    nome.focus()
+
+    addPessoa()
+
+}

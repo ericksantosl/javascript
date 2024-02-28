@@ -7,18 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form>
-        <div id="name">
-            <label for="iname">Nome:</label>
-            <input type="text" name="name" id="iname">
+    <section>
+        <form>
+            <div class="form">
+                <label for="iname">Nome:</label>
+                <input type="text" name="name" id="iname">
+            </div>
+            <div class="form">
+                <label for="iidade">Idade:</label>
+                <input type="number" name="idade" id="iidade">
+            </div>
+            <div class="form">
+                <input type="button" value="ADICIONAR" onclick="adicionar()">
+            </div>
+        </form>
+    </section>
+    <section>
+        <div class="res">
+            <p>Preencha o formulário acima para ver o resultado!
+            </p>
         </div>
-        <div id="idade">
-            <label for="iidade">Idade:</label>
-            <input type="number" name="idade" id="iidade">
-        </div>
-        <div id="botao">
-            <input type="button" value="ADICIONAR">
-        </div>
-    </form>
+    </section>
+
+    <script src="pessoa.js"></script>
 </body>
 </html>
