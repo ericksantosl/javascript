@@ -1,16 +1,20 @@
 const Pessoas = {
-    nome: 'Bruno',
+    nome,
+    idade,
+
     getNome: function() {
         return this.nome
     },
+
+    getIdade: function() {
+        return this.idade
+    },
+
     setNome: function(nome) {
         this.nome = nome
-    }
+    },
+
+    setIdade: function(idade) {
+        this.idade = idade
+    },
 }
-
-const p2 = Pessoas
-
-p2.nome = 'Erick'
-
-console.log(Pessoas.nome)
-console.log(p2.getNome)
