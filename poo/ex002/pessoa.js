@@ -36,7 +36,7 @@ function addPessoa() {
     pessoas.map((p) => {
         const div = document.createElement("div")
         div.setAttribute("class", "pessoa")
-        div.innerHTML = `Nome: ${p.getNome()}<br>Idade: ${p.getIdade()}`
+        div.innerHTML = `Nome: ${p.getNome()}<br>Idade: ${p.getIdade()}<br>--------------------`
         res.appendChild(div)
     })
 }
