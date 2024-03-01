@@ -50,6 +50,8 @@ let c2 = new Carro('Porshe', 3)
 let c3 = new Carro('S10', 2)
 
 
+c3.info()
+
 
 
 
