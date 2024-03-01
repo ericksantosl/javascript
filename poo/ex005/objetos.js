@@ -4,7 +4,20 @@ class person {
         this.idade = idade;
     }
 
-    info() {
-        console.log(`Olá! Meu nome é ${this.nome} e tenho ${this.idade} anos!`);
+    getNome() {
+        return this.nome
     }
+
+    getIdade() {
+        return this.idade
+    }
+
+    setNome(nome) {
+        this.nome = nome
+    }
+
+    setIdade(idade) {
+        this.idade = idade
+    }
+
 };
