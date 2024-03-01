@@ -21,3 +21,9 @@ class person {
     }
 
 };
+
+let p1 = new person()
+
+p1.setNome("Erick")
+
+console.log(p1.getNome())
