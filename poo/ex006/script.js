@@ -12,12 +12,12 @@ let obj = {
 
 }
 
-//console.log(variavel)
+console.log(variavel)
 
-//console.log(arr)
+console.log(arr)
 
-//console.log(arr[3])
+console.log(arr[3])
 
-//console.log(pessoa)
+console.log(pessoa)
 
 console.log(obj.carro)
