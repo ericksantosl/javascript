@@ -82,11 +82,11 @@ tv1.diminuirVolume(); // Deve imprimir "A TV precisa estar ligada!"
 tv1.ligar(); // Deve imprimir "A TV está ligada!"
 
 // Testando aumento de volume até o máximo
-for (let i = 0; i < 60; i++) {
+for (let i = 0; i < 21; i++) {
     tv1.aumentarVolume();
 }
 
 // Testando diminuição de volume até o mínimo
-for (let i = 0; i < 60; i++) {
+for (let i = 0; i < 101; i++) {
     tv1.diminuirVolume();
 }
