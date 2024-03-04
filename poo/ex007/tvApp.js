@@ -27,6 +27,8 @@ class tv {
         }
     }
 
+    // Métodos
+
     ligar() {
         this._ligado = true
         console.log('A TV está ligada!')
@@ -36,7 +38,37 @@ class tv {
         this._ligado = false
         console.log('A TV está desligada!')
     }
+
+    aumentarVolume() {
+        if (this._volume < 100 && this._ligado == true) {
+            this._volume++
+            console.log(`Volume da TV alterado! Volume: ${this._volume}`)
+        } else if(this._ligado == false) {
+            console.log(`A TV precisa estar ligada!`)
+        } else {
+            console.log(`O volume já está no máximo! Volume: ${this._volume}`)
+        }
+        
+    }
+
+    diminuirVolume() {
+        if (this._volume > 0 && this._ligado == true) {
+            this._volume--
+            console.log(`Volume da TV alterado! Volume: ${this._volume}`)
+        } else if(this._ligado == false) {
+            console.log(`A TV precisa estar ligada!`)
+        } else {
+            console.log(`O volume já está no mínimo! Volume: ${this._volume}`)
+        }
+        
+    }
 }
 
 let tv1 = new tv()
+
+tv1.ligar()
+
+tv1.volume = 0
+
+tv1.diminuirVolume()
 
