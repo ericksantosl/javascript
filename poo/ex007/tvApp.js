@@ -64,11 +64,29 @@ class tv {
     }
 }
 
-let tv1 = new tv()
+let tv1 = new tv();
 
-tv1.ligar()
+console.log(tv1.ligado); // Deve imprimir "false" (TV inicialmente desligada)
+console.log(tv1.volume); // Deve imprimir "50" (Volume inicial)
 
-tv1.volume = 0
+tv1.ligar(); // Deve imprimir "A TV está ligada!"
+tv1.aumentarVolume(); // Deve imprimir "Volume da TV alterado! Volume: 51"
+tv1.diminuirVolume(); // Deve imprimir "Volume da TV alterado! Volume: 50"
+tv1.volume = 80; // Deve imprimir "O volume da TV foi alterado. Agora está em 80"
 
-tv1.diminuirVolume()
+tv1.desligar(); // Deve imprimir "A TV está desligada!"
 
+tv1.aumentarVolume(); // Deve imprimir "A TV precisa estar ligada!"
+tv1.diminuirVolume(); // Deve imprimir "A TV precisa estar ligada!"
+
+tv1.ligar(); // Deve imprimir "A TV está ligada!"
+
+// Testando aumento de volume até o máximo
+for (let i = 0; i < 60; i++) {
+    tv1.aumentarVolume();
+}
+
+// Testando diminuição de volume até o mínimo
+for (let i = 0; i < 60; i++) {
+    tv1.diminuirVolume();
+}
