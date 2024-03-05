@@ -1,0 +1,11 @@
+{
+    "nome" : "Erick",
+    "idade" : 20,
+    "trabalhando" : false,
+    "filhos" : null,
+    "detalhes_profissao" : {
+        "profissão" : null,
+        "empresa" : null
+    },
+    "hobbies" : ["Programar", "Jogar VAVA"]
+}
